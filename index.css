@@ -1,8 +1,9 @@
 /* --------------------------------common-------------------------------- */
 
-html {
+html * {
     box-sizing: border-box;
     color: #fff;
+    letter-spacing: -0.03em;
 }
 
 body {
@@ -21,6 +22,9 @@ a {
     color: #fff;
 }
 
+img {
+    user-select: none;
+}
 
 /* --------------------------------메뉴-------------------------------- */
 
@@ -116,11 +120,8 @@ h2 {
     padding: 40px;
 }
 
-#section article {
-    border: 1px solid tomato;
-}
-
 #section .header {
+    border: 1px solid tomato;
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
@@ -134,9 +135,12 @@ h2 {
 }
 
 #section .cardview div{
-    width: 100%; /**/
+    width: 100%;
     background-color: darkgoldenrod; 
     border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    font-weight: 400;
 }
 
 #section .cardview div:not(:last-child) {
@@ -144,15 +148,64 @@ h2 {
 }
 
 /* 카드 big */
+
 #section .cardview.big div {    
     height: 275px;
+    font-size: 50px;
+    padding: 24px 0 0 24px;
+}
+
+#section .cardview.big div img {
+    border-radius: 90px 0px 8px;
+    mix-blend-mode: luminosity;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 
 #section .cardview.big div:nth-child(1) {
     background-color: #8d67ab;
 }
 
+#section .cardview.big div:nth-child(2) {
+    background-color: #BA5D07;
+}
+
+#section .cardview.big div:nth-child(3) {
+    background-color: #608108;
+}
+
 /* 카드 small */
+
 #section .cardview.small div {    
     height: 230px;
+    font-size: 30px;
+    padding : 16px 0 0 16px;
+}
+
+#section .cardview.small div img {
+    border-radius: 8px 0;
+    mix-blend-mode: luminosity;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+#section .cardview.small div:nth-child(1) {
+    background-color: #27856A;
+}
+#section .cardview.small div:nth-child(2) {
+    background-color: #1E3264;
+}
+#section .cardview.small div:nth-child(3) {
+    background-color: #8D67AB;
+}
+#section .cardview.small div:nth-child(4) {
+    background-color: #E8115B;
+}
+#section .cardview.small div:nth-child(5) {
+    background-color: #8D67AB;
+}
+#section .cardview.small div:nth-child(6) {
+    background-color: #1E3264;
 }
