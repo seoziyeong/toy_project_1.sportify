@@ -1,0 +1,158 @@
+/* --------------------------------common-------------------------------- */
+
+html {
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Alexandria', sans-serif;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* --------------------------------메뉴-------------------------------- */
+
+#menu {
+    height: 100%;
+    background-color: #000;
+    padding: 16px;
+    color: #fff;
+    font-weight: 400;
+    height: 100vh;
+}
+
+h1 {
+    margin: 16px 0 24px 16px;
+    padding: 0;
+}
+
+h1 img {
+    width: 164px;
+}
+
+#menu .menu_with_icon {
+    display: flex; 
+    flex-direction: column;
+    width: 100%-24px;
+    margin-bottom: 32px;
+}
+
+#menu .menu_with_icon img {
+    width: 24px;
+    margin-right: 16px;
+}
+
+#menu .menu_with_icon a .dir div:nth-child(1),
+#menu .menu_with_icon a .dir_here div:nth-child(1){
+    height: 24px;
+}
+
+#menu .menu_with_icon a .dir {
+    display: flex; 
+    flex-direction: row;
+    padding: 12px 24px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
+    transition: background-color 0.3s linear;
+}
+
+#menu .menu_with_icon a .dir_here {
+    display: flex; 
+    flex-direction: row;
+    padding: 12px 24px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: #444444;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#menu .menu_with_icon a .dir:hover {
+    display: flex; 
+    flex-direction: row;
+    padding: 12px 24px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-color: #282828;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#menu .menu_txt {
+    margin-left: 24px;
+}
+#menu .menu_txt div {
+    margin-bottom: 24px;
+}
+#menu .menu_txt div a:hover {
+    text-decoration: underline;
+}
+
+
+/* --------------------------------본문-------------------------------- */
+
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+
+#section {
+    background-color: #0E0E0E;
+    padding: 40px;
+}
+
+#section article {
+    border: 1px solid tomato;
+}
+
+#section .header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#section .cardview {
+    display: flex; 
+    flex-direction: row;
+    /* flex-wrap: wrap; 미디어 쿼리에서 적용해보자.. */
+    justify-content: space-between;
+}
+
+#section .cardview div{
+    width: 100%; /**/
+    background-color: darkgoldenrod; 
+    border-radius: 8px;
+}
+
+#section .cardview div:not(:last-child) {
+    margin-right: 24px;
+}
+
+/* 카드 big */
+#section .cardview.big div {    
+    height: 275px;
+}
+
+#section .cardview.big div:nth-child(1) {
+    background-color: #8d67ab;
+}
+
+/* 카드 small */
+#section .cardview.small div {    
+    height: 230px;
+}
