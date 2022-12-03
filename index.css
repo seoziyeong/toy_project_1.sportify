@@ -26,6 +26,10 @@ img {
     user-select: none;
 }
 
+p {
+    margin: 0;
+}
+
 /* --------------------------------메뉴-------------------------------- */
 
 #menu {
@@ -112,8 +116,8 @@ h1 img {
 h2 {
     font-size: 32px;
     font-weight: 500;
+    margin: 40px 0 24px;
 }
-
 
 #section {
     background-color: #0E0E0E;
@@ -121,11 +125,63 @@ h2 {
 }
 
 #section .header {
-    border: 1px solid tomato;
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
 }
+
+#section .header .inputWrap {
+    width: 450px;
+    height: 50px;
+    padding: 14px 16px;
+    background-color: #fff;
+    border-radius: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+#section .header .inputWrap img {
+    height: 24px;
+    margin-right: 12px;
+}
+
+#section .header .inputWrap input{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    border: none;
+    outline-style: none;
+}
+
+#section .header .inputWrap input::placeholder {
+    color: #8e8e8e;
+}
+
+#section .header .profile {
+    display: flex;
+    flex-direction: row;
+}
+
+#section .header .profile p {
+    font-size: 18px;
+    position: relative;
+    top: 25%;
+    
+}
+
+
+#section .header .profile div {
+    width: 50px;
+    height: 50px;
+    background-color: #E8115B;
+    border-radius: 70%;
+    margin-right: 12px;
+}
+
+
+
+
 
 #section .cardview {
     display: flex; 
@@ -145,7 +201,7 @@ h2 {
 
 
 #section .cardview div:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.3);
     transform: scale(1.02);
 }
 
@@ -219,3 +275,36 @@ h2 {
 }
 
 
+/* --------------------------------재생바-------------------------------- */
+
+
+#playBar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: #181818;
+    border-top: 1px solid #282828;
+    border-bottom: 8px solid #1ED760;
+    padding: 20px;
+}
+
+#playBar .playInfo {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+
+#playBar .playInfo img:nth-child(1) {
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+#playBar .playInfo img:nth-child(3) {
+    height: 24px;
+    margin-left: 40px;
+}
