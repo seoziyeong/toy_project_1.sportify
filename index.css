@@ -136,12 +136,19 @@ h2 {
 
 #section .cardview div{
     width: 100%;
-    background-color: darkgoldenrod; 
     border-radius: 8px;
     position: relative;
     overflow: hidden;
     font-weight: 400;
+    transition: all 0.4s ease-out;
 }
+
+
+#section .cardview div:hover {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+}
+
 
 #section .cardview div:not(:last-child) {
     margin-right: 24px;
@@ -154,6 +161,7 @@ h2 {
     font-size: 50px;
     padding: 24px 0 0 24px;
 }
+
 
 #section .cardview.big div img {
     border-radius: 90px 0px 8px;
@@ -179,7 +187,7 @@ h2 {
 
 #section .cardview.small div {    
     height: 230px;
-    font-size: 30px;
+    font-size: 28px;
     padding : 16px 0 0 16px;
 }
 
@@ -209,3 +217,5 @@ h2 {
 #section .cardview.small div:nth-child(6) {
     background-color: #1E3264;
 }
+
+
