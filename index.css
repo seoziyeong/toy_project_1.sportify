@@ -116,7 +116,7 @@ h1 img {
 h2 {
     font-size: 32px;
     font-weight: 500;
-    margin: 40px 0 24px;
+    margin: 40px 0 16px;
 }
 
 #section {
@@ -161,20 +161,21 @@ h2 {
 #section .header .profile {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    font-size: 18px;
 }
 
-#section .header .profile p {
-    font-size: 18px;
-    position: relative;
-    top: 25%;
-    
+#section .header .profile:hover {
+    filter: brightness(1.1);
+    text-decoration: underline;
 }
 
 
 #section .header .profile div {
     width: 50px;
     height: 50px;
-    background-color: #E8115B;
+    background: url("images/profile.jpg") no-repeat;
+    background-size: 50px 50px;
     border-radius: 70%;
     margin-right: 12px;
 }
@@ -282,21 +283,26 @@ h2 {
     width: 100%;
     position: fixed;
     bottom: 0;
-
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
-
     background-color: #181818;
     border-top: 1px solid #282828;
     border-bottom: 8px solid #1ED760;
-    padding: 20px;
+    padding: 16px;
 }
 
-#playBar .playInfo {
+#playBar .playInfo,
+#playBar .playSet {
     display: flex; 
     flex-direction: row;
     align-items: center;
+}
+
+#playBar .playArea {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
 }
 
 #playBar .playInfo img:nth-child(1) {
@@ -304,7 +310,116 @@ h2 {
     margin-right: 20px;
 }
 
+#playBar .playInfo div p:last-child {
+    color: #B3B3B3;
+    font-size: 14px;
+}
+
 #playBar .playInfo img:nth-child(3) {
     height: 24px;
     margin-left: 40px;
+}
+
+
+#playBar .playArea {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#playBar .playArea .control {
+    width: 280px;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#playBar .playArea .control input,
+#playBar .playSet input {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+#playBar .playArea .control .shuffle {
+    background: url("images/icon_play_shuffle.png") no-repeat;
+}
+
+#playBar .playArea .control .skip_p {
+    background: url("images/icon_play_skip_p.png") no-repeat;
+}
+
+#playBar .playArea .control .play {
+    width: 51px;
+    height: 51px;
+    background: url("images/icon_play.png") no-repeat;
+}
+
+#playBar .playArea .control .skip_n {
+    background: url("images/icon_play_skip_n.png") no-repeat;
+}
+
+#playBar .playArea .control .repeat {
+    background: url("images/icon_play_repeat.png") no-repeat;
+}
+
+
+#playBar .playArea .status {
+    height: 28px;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#playBar .playArea .status p {
+    color: #C4C4C4;
+}
+
+
+#playBar .playArea .status :nth-child(2) {
+    width: 500px;
+    height: 5px;
+    background-color: #535353;
+    margin: 0 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#playBar .playArea .status :nth-child(2) div {
+    width: 0px;
+    height: 100%;
+    background-color: #C4C4C4;
+    animation: playing 180s linear infinite;
+}
+
+@keyframes playing {
+    from { width: 0% }
+    to { width: 100% }
+}
+
+#playBar .playSet * {
+    margin-left: 24px;
+
+}
+#playBar .playSet .playlist {
+    background: url("images/icon_play_list.png") no-repeat;
+}
+
+#playBar .playSet .speaker {
+    background: url("images/icon_play_speacker.png") no-repeat;
+}
+
+#playBar .playSet .expand {
+    background: url("images/icon_play_expand.png") no-repeat;
+}
+
+#playBar .playSet .speakerbar {
+    width: 120px;
+    height: 5px;
+    background-color: #C4C4C4;
+    border-radius: 10px;
 }

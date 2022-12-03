@@ -13,7 +13,7 @@
     <div id="container">
         <nav id="menu">
             <h1>
-                <img src="images/logo.png">
+                <a href=""><img src="images/logo.png"></a>
             </h1>
             
             <div class="menu_with_icon">
@@ -74,10 +74,12 @@
                     <img src="images/icon_search.png">
                     <input type="search" placeholder="Artists, songs, or podcasts">
                 </div>
-                <div class="profile">
-                    <div></div>
-                    <p>Jiyeong</p>
-                </div>
+                <a href="">
+                    <div class="profile">
+                        <div></div>
+                        <p>Jiyeong</p>
+                    </div>
+                </a>
             </article>
             
             <h2>Your top genres</h2>
@@ -134,8 +136,30 @@
                 </div>
                 <img src="images/icon_like_off.png">
             </div>
-            <div class="playArea">재생</div>
-            <div class="palySet">ㅁㄴㅇㄹ</div>
+            <div class="playArea">
+                <div class="control">
+                        <div></div>
+                        <input type="button" class="shuffle">
+                        <input type="button" class="skip_p">
+                        <input type="button" class="play">
+                        <input type="button" class="skip_n">
+                        <input type="button" class="repeat">
+                        <div></div>
+                </div>
+                <div class="status">
+                    <p>0:00</p>
+                    <div>
+                        <div></div>
+                    </div>
+                    <p>3:00</p>
+                </div>
+            </div>
+            <div class="playSet">
+                <input type="button" class="playlist">
+                <input type="button" class="speaker">
+                <div class="speakerbar"></div>
+                <input type="button" class="expand">
+            </div>
         </section>
     </div>
 
